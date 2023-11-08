@@ -1,0 +1,150 @@
+/* Notice */
+.notice {
+	background-color: #F0C948;
+	color: black;
+	text-align: center;
+	margin: 0;
+	border: 10px dashed #A38931;
+}
+
+/* Header-related styling */
+
+.header {
+	background-color: #000000;
+	padding: 10px;
+	color: white;
+	position: sticky;
+	top: 0px;
+}
+
+.header-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#header-title {
+	font-size: 1.5rem;
+	display: inline;
+}
+
+.header-icons-container {
+	display: flex;
+	gap: 10px;
+}
+
+.header-icon {
+	height: 50px;
+	width: 50px;
+	border: 5px solid #2D2D32;
+	display: flex;
+	justify-content: center;
+	align-items:　center;
+	font-size: 2rem;
+}
+
+i {
+	margin: auto;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+/* Footer-related styling */
+
+.footer {
+	background-color: #000000;
+	padding: 10px;
+	color: white;
+	flex-shrink: 0;
+}
+
+/* Everything else */
+
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background-color: #1E2832;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+}
+
+main {
+	flex: 1 0 auto;
+	color: white;
+	padding: 20px;
+}
+
+/* Subjects */
+.math {
+	background-color: #CC0000;
+}
+
+.science {
+	background-color: #0ACD00;
+}
+
+.english {
+	background-color: #9100CD;
+}
+
+.filipino {
+	background-color: #CD7800;
+}
+
+.ap {
+	background-color: #0037CD;
+}
+
+.computer {
+	background-color: #643C28;
+}
+
+.music {
+	color: #000000;
+	background-color: #E5CD00;
+}
+
+.arts {
+	color: #000000;
+	background-color: #B3A424;
+}
+
+.pe {
+	color: #000000;
+	background-color: #807833;
+}
+
+.health {
+	color: #000000;
+	background-color: #4C492E;
+}
+
+.specs {
+	background-color: #9B461E;
+}
+
+.ve {
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+.mapeh {
+	color: #000000;
+	background-color: #E6E100;
+}
+
+@media (max-width: 900px) {
+	.header-icons-container {
+		display: none;
+	}
+}

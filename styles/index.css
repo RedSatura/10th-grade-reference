@@ -1,0 +1,57 @@
+/* Everything else */
+
+.quarter {
+	margin: 20px;
+	border-radius: 5px;
+	padding: 10px 25px 10px 25px;
+	color: #767F88;
+}
+
+.quarter-container {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+
+.subject-list {
+	list-style-type: none;
+	display: flex;
+	gap: 5px;
+}
+
+.subject-list > li {
+	padding: 5px;
+	flex-grow: 1;
+	border: 3px solid black;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+#second-quarter {
+	background-color: #23321E;
+	color: white;
+}
+
+#third-quarter {
+	background-color: #332B1F;
+}
+
+#fourth-quarter {
+	background-color: #331F2F;
+}
+
+@media (max-width: 925px) {
+	.subject-list {
+		display: grid;
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+
+@media (max-width: 630px) {
+	.subject-list {
+		display: flex;
+		flex-direction: column;
+	}
+}

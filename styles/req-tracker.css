@@ -1,0 +1,79 @@
+.req-table {
+	background-color: #505A64;
+	border-spacing: 10px;
+	border: 5px solid #788C9B;
+	width: 100%;
+	text-align: center;
+}
+
+.table-container {
+	display: flex;
+	justify-content: center;
+}
+
+.req-table-header {
+	border-bottom: 5px solid black;
+}
+
+.cell-subject {
+	border-left: 5px solid fuchsia;
+}
+
+/* subject borders */
+.subject-math {
+	border-color: #CC0000;
+}
+
+.subject-science {
+	border-color: #0ACD00;
+}
+
+.subject-english {
+	border-color: #9100CD;
+}
+
+.subject-filipino {
+	border-color: #CD7800;
+}
+
+.subject-ap {
+	border-color: #0037CD;
+}
+
+.subject-computer {
+	border-color: #643C28;
+}
+
+.subject-music {
+	border-color: #E5CD00;
+}
+
+.subject-arts {
+	border-color: #B3A424;
+}
+
+.subject-pe {
+	border-color: #807833;
+}
+
+.subject-health {
+	border-color: #4C492E;
+}
+
+.subject-specs {
+	border-color: #9B461E;
+}
+
+.subject-ve {
+	border-color: #FFFFFF;
+}
+
+.subject-mapeh {
+	border-color: #E6E100;
+}
+
+@media (max-width: 425px) {
+	table.req-table td:nth-child(4), td:nth-child(5), th:nth-child(4), th:nth-child(5)  {
+		display: none;
+	}
+}
