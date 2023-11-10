@@ -14,7 +14,7 @@
 	padding: 10px;
 	color: white;
 	position: sticky;
-	top: 0px;
+	top: 0;
 }
 
 .header-content {
@@ -96,6 +96,7 @@ table {
 
 html {
 	height: 100%;
+	overflow: auto;
 }
 
 body {
@@ -107,6 +108,7 @@ body {
 	flex-direction: column;
 	height: 100%;
 	width: 100%;
+	overflow: auto;
 }
 
 main {
