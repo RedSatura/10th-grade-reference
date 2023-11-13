@@ -38,6 +38,15 @@
 	visibility: hidden;
 }
 
+/* dd related */
+dt, dd {
+	margin-bottom: 5px;
+}
+
+dt {
+	font-weight: bold;
+}
+
 /* Header-related styling */
 
 .header {

@@ -6,14 +6,6 @@
 	border-bottom: 5px solid #0ACD00;
 }
 
-dt, dd {
-	margin-bottom: 5px;
-}
-
-dt {
-	font-weight: bold;
-}
-
 /* images */
 #em-spectrum-img {
 	width: 30%;
