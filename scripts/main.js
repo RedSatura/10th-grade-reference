@@ -1,18 +1,31 @@
 //header-related js
-var icons = document.getElementsByClassName("header-dropdown");
-var headerButton = document.getElementById("specs-dropdown-button");
+var dropdowns = document.getElementsByClassName("dropdown-content");
+var dropdownButton = document.getElementsByClassName("dropdown-button");
 
-headerButton.addEventListener("click", showHeaderDropdown);
+dropdownButton[0].addEventListener("click", showMapehDropdown);
+dropdownButton[1].addEventListener("click", showSpecsDropdown);
 
 //i think this is a terrible way to implement this but i'm tired and out　of ideas
-function showHeaderDropdown() {
-	document.getElementById("specs-header-dropdown-content").classList.toggle("show-dropdown");
+function showMapehDropdown() {
+	hideDropdowns();
+	document.getElementById("header-mapeh-dropdown-content").classList.toggle("show-dropdown");
+}
+
+function showSpecsDropdown() {
+	hideDropdowns();
+	document.getElementById("header-specs-dropdown-content").classList.toggle("show-dropdown");
 }
 
 window.onclick = function(event) {
-	if (!event.target.matches(".header-dropdown")) {
-		if (document.getElementById("specs-header-dropdown-button") != null) {
-			document.getElementById("specs-header-dropdown-content").classList.remove("show-dropdown");
+	if (!event.target.matches(".dropdown-button")) {
+		hideDropdowns();
+	}
+}
+
+function hideDropdowns() {
+	for (let i = 0; i < dropdowns.length; i++) {
+		if (dropdowns[i].classList.contains("show-dropdown")) {
+			dropdowns[i].classList.remove("show-dropdown");
 		}
 	}
 }
