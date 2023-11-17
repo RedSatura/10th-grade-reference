@@ -17,7 +17,7 @@ function showSpecsDropdown() {
 }
 
 window.onclick = function(event) {
-	if (!event.target.matches(".dropdown-button")) {
+	if (!event.target.matches(".dropdown-button") && !event.target.matches(".subject-specs")) {
 		hideDropdowns();
 	}
 }

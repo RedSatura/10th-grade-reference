@@ -1,0 +1,17 @@
+.subject-dropdown-button {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.subject-button-container {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.subject-specs {
+	position: absolute;
+	padding: 0;
+}
