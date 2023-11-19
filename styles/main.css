@@ -187,6 +187,10 @@ body {
 	overflow: auto;
 }
 
+html, body {
+	scroll-behavior: smooth;
+}
+
 main {
 	flex: 1 0 auto;
 	color: white;
