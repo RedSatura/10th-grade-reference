@@ -1,3 +1,5 @@
+/* hours wasted on stupid dropdown bug: 3 */
+
 .subject-dropdown-button {
 	display: block;
 	width: 100%;
@@ -12,9 +14,19 @@
 }
 
 .subject-dropdown {
+	display: none;
 	margin: 0;
 }
 
 .subject-specs {
 	position: relative;
+}
+
+@media (max-width: 480px) {
+	.subject-dropdown {
+		position: absolute;
+		background-color: #828282;
+		border: 5px solid #5A5A5A;
+		z-index: 1;
+	}
 }
