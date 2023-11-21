@@ -31,7 +31,6 @@
 
 .dropdown-content {
 	display: none;
-	position: absolute;
 	background-color: #828282;
 	border: 5px solid #5A5A5A;
 	z-index: 1;
@@ -39,6 +38,7 @@
 
 .show-dropdown {
 	display: block;
+	position: absolute;
 }
 
 /* Back to top button */
@@ -270,5 +270,10 @@ main {
 @media (max-width: 480px) {
 	.table-of-contents-list, .table-of-contents-list li {
 		margin: 5px;
+	}
+	
+	.show-dropdown {
+		display: block;
+		position: static;
 	}
 }
