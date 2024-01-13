@@ -118,6 +118,18 @@ dt {
 	font-size: 2rem;
 }
 
+figure {
+	background-color: #525C66;
+	border: 5px solid #525C66;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+figcaption {
+	display: inline;
+	clear: left;
+}
+
 i {
 	margin: auto;
 }
@@ -129,9 +141,10 @@ a {
 }
 
 img {
-	margin: 10px;
 	border: 5px solid #525C66;
 	border-radius: 5px;
+	display: inline;
+	margin: 10px;
 }
 
 table {
@@ -223,22 +236,18 @@ main {
 }
 
 .music {
-	color: #000000;
 	background-color: #E5CD00;
 }
 
 .arts {
-	color: #000000;
 	background-color: #B3A424;
 }
 
 .pe {
-	color: #000000;
 	background-color: #807833;
 }
 
 .health {
-	color: #000000;
 	background-color: #4C492E;
 }
 
@@ -252,13 +261,17 @@ main {
 }
 
 .mapeh {
-	color: #000000;
 	background-color: #E6E100;
 }
 
 .unavailable {
 	color: white;
 	background-color: #788C9B;
+}
+
+/* misc */
+p.credit {
+	font-style: italic;
 }
 
 @media (max-width: 900px) {
@@ -275,5 +288,9 @@ main {
 	.show-dropdown {
 		display: block;
 		position: static;
+	}
+	
+	img {
+		float: none;
 	}
 }
