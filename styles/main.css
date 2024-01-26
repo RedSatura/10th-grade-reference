@@ -74,7 +74,7 @@
 
 /* dd related */
 dt, dd {
-	margin-bottom: 5px;
+	margin: 5px;
 }
 
 dt {
@@ -86,7 +86,6 @@ dt {
 .header {
 	background-color: #000000;
 	padding: 10px;
-	color: white;
 	position: sticky;
 	top: 0;
 }
@@ -252,6 +251,7 @@ main {
 }
 
 .specs {
+	color: #FFFFFF;
 	background-color: #9B461E;
 }
 
@@ -261,12 +261,81 @@ main {
 }
 
 .mapeh {
+	color: #FFFFFF;
 	background-color: #E6E100;
 }
 
 .unavailable {
 	color: white;
 	background-color: #788C9B;
+}
+
+/* subject borders */
+.subject-border {
+	border: 1px solid;
+}
+
+/* subject bottom borders */
+.bottom-border {
+	border-bottom: 5px solid;
+}
+
+.math-border {
+	border-color: #CC0000;
+}
+
+.science-border {
+	border-color: #0ACD00;
+}
+
+.english-border {
+	border-color: #9100CD;
+}
+
+.filipino-border {
+	border-color: #CD7800;
+}
+
+.ap-border {
+	border-color: #0037CD;
+}
+
+.computer-border {
+	border-color: #643C28;
+}
+
+.music-border {
+	border-color: #E5CD00;
+}
+
+.arts-border {
+	border-color: #B3A424;
+}
+
+.pe-border {
+	border-color: #807833;
+}
+
+.health-border {
+	border-color: #4C492E;
+}
+
+.specs-border {
+	border-color: #9B461E;
+}
+
+.ve-border {
+	border-color: #FFFFFF;
+	color: #000000;
+}
+
+.mapeh-border {
+	border-color: #E6E100;
+}
+
+.unavailable-border {
+	color: white;
+	border-color: #788C9B;
 }
 
 /* misc */
