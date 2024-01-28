@@ -1,0 +1,129 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/fonts/Shippori_Antique_B1/ShipporiAntiqueB1-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/team.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/default_text.tres" type="Theme" id=3]
+[ext_resource path="res://scenes/world.gd" type="Script" id=4]
+
+[sub_resource type="Environment" id=1]
+background_color = Color( 0.184314, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 12
+font_data = ExtResource( 1 )
+
+[sub_resource type="Curve2D" id=12]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 32, 96, 0, 0, 0, 0, 192, 96, 0, 0, 0, 0, 192, 124, 0, 0, 0, 0, 320, 124, 0, 0, 0, 0, 320, 180, 0, 0, 0, 0, 416, 180 )
+}
+
+[sub_resource type="Curve2D" id=13]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 32, 152, 0, 0, 0, 0, 192, 152, 0, 0, 0, 0, 192, 124, 0, 0, 0, 0, 320, 124, 0, 0, 0, 0, 320, 180, 0, 0, 0, 0, 416, 180 )
+}
+
+[sub_resource type="Curve2D" id=15]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 32, 212, 0, 0, 0, 0, 61.5423, 211.735, 0, 0, 0, 0, 192, 212, 0, 0, 0, 0, 192, 240, 0, 0, 0, 0, 320, 240, 0, 0, 0, 0, 320, 180, 0, 0, 0, 0, 416, 180 )
+}
+
+[sub_resource type="Curve2D" id=14]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 32, 268, 0, 0, 0, 0, 192, 268, 0, 0, 0, 0, 192, 240, 0, 0, 0, 0, 320, 240, 0, 0, 0, 0, 320, 180, 0, 0, 0, 0, 416, 180 )
+}
+
+[sub_resource type="DynamicFont" id=16]
+size = 12
+font_data = ExtResource( 1 )
+
+[node name="World" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 512.0
+margin_bottom = 64.0
+theme = ExtResource( 3 )
+text = "Single Elimination Tournament"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 356.0
+margin_top = 276.0
+margin_right = 504.0
+margin_bottom = 294.0
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 11 )
+text = "Made with Godot Engine"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Red" type="Path2D" parent="Node2D"]
+curve = SubResource( 12 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/Red"]
+position = Vector2( 32.0025, 96 )
+offset = 0.00494385
+loop = false
+
+[node name="Red" parent="Node2D/Red/PathFollow2D" instance=ExtResource( 2 )]
+color = Color( 1, 0, 0, 1 )
+
+[node name="Yellow" type="Path2D" parent="Node2D"]
+curve = SubResource( 13 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/Yellow"]
+position = Vector2( 32, 152 )
+loop = false
+
+[node name="Yellow" parent="Node2D/Yellow/PathFollow2D" instance=ExtResource( 2 )]
+color = Color( 1, 1, 0, 1 )
+
+[node name="Green" type="Path2D" parent="Node2D"]
+curve = SubResource( 15 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/Green"]
+position = Vector2( 32, 212 )
+rotation = -0.00895349
+loop = false
+
+[node name="Green" parent="Node2D/Green/PathFollow2D" instance=ExtResource( 2 )]
+rotation = 0.00895349
+color = Color( 0, 1, 0, 1 )
+
+[node name="Blue" type="Path2D" parent="Node2D"]
+curve = SubResource( 14 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/Blue"]
+position = Vector2( 32, 268 )
+loop = false
+
+[node name="Blue" parent="Node2D/Blue/PathFollow2D" instance=ExtResource( 2 )]
+color = Color( 0, 0, 1, 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 208.0
+margin_top = 264.0
+margin_right = 324.0
+margin_bottom = 292.0
+focus_mode = 0
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 16 )
+text = "Play Semifinals"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

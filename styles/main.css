@@ -343,6 +343,12 @@ p.credit {
 	font-style: italic;
 }
 
+iframe {
+	border: 5px solid #525C66;
+	border-radius: 5px;
+	margin: 10px;
+}
+
 @media (max-width: 900px) {
 	.header-icons-container {
 		display: none;
