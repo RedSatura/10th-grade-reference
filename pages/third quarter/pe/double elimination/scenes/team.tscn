@@ -1,0 +1,4 @@
+[gd_scene format=2]
+
+[node name="Team" type="Polygon2D"]
+polygon = PoolVector2Array( -12, -12, -12, 12, 12, 12, 12, -12 )

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/fonts/Shippori_Antique_B1/ShipporiAntiqueB1-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/team.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/default_text.tres" type="Theme" id=3]
+[ext_resource path="res://assets/tournament_button.tres" type="Theme" id=3]
 [ext_resource path="res://scenes/world.gd" type="Script" id=4]
 
 [sub_resource type="Environment" id=1]
@@ -95,7 +95,7 @@ curve = SubResource( 15 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Node2D/Green"]
 position = Vector2( 32, 212 )
-rotation = -0.00895349
+rotation = -0.00896907
 loop = false
 
 [node name="Green" parent="Node2D/Green/PathFollow2D" instance=ExtResource( 2 )]
